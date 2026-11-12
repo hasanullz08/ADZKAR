@@ -1,0 +1,6 @@
+{
+  "name": "ADZKAR — Daily Islamic Companion",
+  "description": "Futuristic urban Islamic companion app inspired by the visual design language of Zenless Zone Zero, featuring daily adzkar, next prayer countdown, interactive tasbih, and worship tracker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1B22"/>
+      <stop offset="100%" stop-color="#101114"/>
+    </linearGradient>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8FF6B"/>
+      <stop offset="100%" stop-color="#D7FF3F"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base with Chamfered Tech Feel -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#bgGrad)" stroke="#262833" stroke-width="6"/>
+
+  <!-- Cyber Decorative Accent Rings -->
+  <circle cx="256" cy="256" r="185" fill="none" stroke="#D7FF3F" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#D7FF3F" stroke-opacity="0.2" stroke-width="3"/>
+
+  <!-- Tech Chamfer Accents -->
+  <path d="M 64 120 L 64 64 L 120 64" fill="none" stroke="#D7FF3F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 448 392 L 448 448 L 392 448" fill="none" stroke="#D7FF3F" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Central Glowing Crescent Moon -->
+  <path d="M 285 135 C 205 145 155 210 160 290 C 165 365 225 415 300 410 C 240 395 205 340 210 280 C 215 220 255 170 315 155 C 305 145 295 138 285 135 Z"
+        fill="url(#limeGrad)" filter="url(#glow)"/>
+
+  <!-- Islamic 8-Pointed Star (Rub el Hizb element) -->
+  <g transform="translate(325, 215)" filter="url(#glow)">
+    <polygon points="0,-36 10,-10 36,0 10,10 0,36 -10,10 -36,0 -10,-10" fill="#D7FF3F"/>
+    <polygon points="0,-36 10,-10 36,0 10,10 0,36 -10,10 -36,0 -10,-10" fill="#E8FF6B" transform="rotate(45)"/>
+    <circle cx="0" cy="0" r="7" fill="#101114"/>
+  </g>
+
+  <!-- Cyber Subtitle / Label -->
+  <text x="256" y="445" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="28" font-weight="900" fill="#F3F0E8" letter-spacing="6" text-anchor="middle">ADZKAR</text>
+</svg>

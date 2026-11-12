@@ -1,0 +1,10 @@
+{
+  "appId": "com.adzkar.companion",
+  "appName": "ADZKAR",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
+

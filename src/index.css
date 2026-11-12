@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-deep: #101114;
+    --surface-charcoal: #1A1B22;
+    --surface-darker: #14151B;
+    --surface-card: #202129;
+    --electric-lime: #D7FF3F;
+    --off-white: #F3F0E8;
+    --cool-gray: #A5A6AC;
+    --hazard-red: #F04438;
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--off-white);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Font Utilities */
+.font-tech {
+  font-family: 'Rajdhani', -apple-system, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+  line-height: 2.2;
+  direction: rtl;
+}
+
+/* Zenless Zone Zero Angled Geometry & Chamfers */
+.cut-corner-tr {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+}
+
+.cut-corner-tr-sm {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+.cut-corner-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.cut-corner-both {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+
+.cut-corner-card {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+/* Hazard Tape & Caution Stripes */
+.hazard-stripes-lime {
+  background: repeating-linear-gradient(
+    -45deg,
+    #D7FF3F,
+    #D7FF3F 8px,
+    #101114 8px,
+    #101114 16px
+  );
+}
+
+.hazard-stripes-subtle {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(215, 255, 63, 0.15),
+    rgba(215, 255, 63, 0.15) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.hazard-stripes-red {
+  background: repeating-linear-gradient(
+    -45deg,
+    #F04438,
+    #F04438 8px,
+    #101114 8px,
+    #101114 16px
+  );
+}
+
+/* Dot matrix texture background */
+.bg-tech-dots {
+  background-image: radial-gradient(rgba(215, 255, 63, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Glow effects */
+.glow-lime {
+  box-shadow: 0 0 24px -4px rgba(215, 255, 63, 0.45);
+}
+
+.glow-lime-sm {
+  box-shadow: 0 0 12px -2px rgba(215, 255, 63, 0.35);
+}
+
+.text-glow-lime {
+  text-shadow: 0 0 12px rgba(215, 255, 63, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14151B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2E303B;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D7FF3F;
+}
